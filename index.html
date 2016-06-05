@@ -1,0 +1,317 @@
+<!DOCTYPE HTML>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EII UVa Panorama</title>
+    <link rel="stylesheet" href="css/pannellum.css" />
+    <script type="text/javascript" src="js/pannellum.js"></script>
+    <style>
+        #panorama {
+            position: absolute;
+            top: 0;
+            bottom: 0;
+            left: 0;
+            right: 0;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="panorama"></div>
+    <script>
+        pannellum.viewer('panorama', {
+            "default": {
+                "firstScene": "planta-baja-circulo-central",
+                "author": "Javier Provecho Fernández (@javierprovecho)",
+                //"sceneFadeDuration": 1000,
+                //"autoLoad": true
+            },
+
+            "scenes": {
+                "planta-baja-salon-de-grados": {
+                    "title": "Planta baja, Salón de Grados",
+                    "type": "multires",
+                    "multiRes": {
+                        "path": "img/IMG_1186/%l/%s%y_%x",
+                        "fallbackPath": "img/IMG_1186/fallback/%s",
+                        "extension": "jpg",
+                        "tileResolution": 512,
+                        "maxLevel": 4,
+                        "cubeResolution": 3096
+                    },
+                    "pitch": 0,
+                    "yaw": 65,
+                    "hotSpots": [{
+                        "pitch": -10,
+                        "yaw": 112,
+                        "type": "scene",
+                        "text": "Planta baja, Pasillo central",
+                        "sceneId": "planta-baja-pasillo-central",
+                        "targetYaw": 220,
+                        "targetPitch": 0
+                    }]
+                },
+                "planta-baja-pasillo-central": {
+                    "title": "Planta baja, Pasillo central",
+                    "type": "multires",
+                    "multiRes": {
+                        "path": "img/IMG_1221/%l/%s%y_%x",
+                        "fallbackPath": "img/IMG_1221/fallback/%s",
+                        "extension": "jpg",
+                        "tileResolution": 512,
+                        "maxLevel": 4,
+                        "cubeResolution": 3096
+                    },
+                    "pitch": 0,
+                    "yaw": 220,
+                    "hotSpots": [{
+                        "pitch": -10,
+                        "yaw": 255,
+                        "type": "scene",
+                        "text": "Planta baja, Salón de Grados",
+                        "sceneId": "planta-baja-salon-de-grados",
+                        "targetYaw": 65,
+                        "targetPitch": 0
+                    }, {
+                        "pitch": -15,
+                        "yaw": 176,
+                        "type": "scene",
+                        "text": "Planta baja, Círculo central",
+                        "sceneId": "planta-baja-circulo-central",
+                        "targetYaw": 45,
+                        "targetPitch": 0
+                    }]
+                },
+                "planta-baja-circulo-central": {
+                    "title": "Planta baja, Círculo central",
+                    "type": "multires",
+                    "multiRes": {
+                        "path": "img/IMG_1222/%l/%s%y_%x",
+                        "fallbackPath": "img/IMG_1222/fallback/%s",
+                        "extension": "jpg",
+                        "tileResolution": 512,
+                        "maxLevel": 4,
+                        "cubeResolution": 3096
+                    },
+                    "pitch": 0,
+                    "yaw": 45,
+                    "hotSpots": [{
+                        "pitch": -10,
+                        "yaw": -2,
+                        "type": "scene",
+                        "text": "Planta baja, Escaleras izquierda",
+                        "sceneId": "planta-baja-escaleras-izquierda",
+                        "targetYaw": 320,
+                        "targetPitch": 0
+                    }, {
+                        "pitch": -10,
+                        "yaw": 88,
+                        "type": "scene",
+                        "text": "Planta baja, Pasillo central",
+                        "sceneId": "planta-baja-pasillo-central",
+                        "targetYaw": 220,
+                        "targetPitch": 0
+                    }]
+                },
+                "planta-baja-escaleras-izquierda": {
+                    "title": "Planta baja, Escaleras izquierda",
+                    "type": "multires",
+                    "multiRes": {
+                        "path": "img/IMG_1223/%l/%s%y_%x",
+                        "fallbackPath": "img/IMG_1223/fallback/%s",
+                        "extension": "jpg",
+                        "tileResolution": 512,
+                        "maxLevel": 4,
+                        "cubeResolution": 3096
+                    },
+                    "pitch": 0,
+                    "yaw": 320,
+                    "hotSpots": [{
+                        "pitch": -10,
+                        "yaw": 182,
+                        "type": "scene",
+                        "text": "Planta baja, Círculo central",
+                        "sceneId": "planta-baja-circulo-central",
+                        "targetYaw": 45,
+                        "targetPitch": 0
+                    }, {
+                        "pitch": -4,
+                        "yaw": 272,
+                        "type": "scene",
+                        "text": "Exterior, Puerta centro izquierda",
+                        "sceneId": "exterior-puerta-centro-izquierda",
+                        "targetYaw": 130,
+                        "targetPitch": 0
+                    }, {
+                        "pitch": -12,
+                        "yaw": 3,
+                        "type": "scene",
+                        "text": "Planta baja, Pasillo izquierda",
+                        "sceneId": "planta-baja-pasillo-izquierda",
+                        "targetYaw": 135,
+                        "targetPitch": 0
+                    }, {
+                        "pitch": -8,
+                        "yaw": 64,
+                        "type": "scene",
+                        "text": "Planta primera, Escaleras izquierda",
+                        "sceneId": "planta-primera-escaleras-izquierda",
+                        "targetYaw": 290,
+                        "targetPitch": 0
+                    }]
+                },
+                "exterior-puerta-centro-izquierda": {
+                    "title": "Exterior, Puerta centro izquierda",
+                    "type": "multires",
+                    "multiRes": {
+                        "path": "img/IMG_1224/%l/%s%y_%x",
+                        "fallbackPath": "img/IMG_1224/fallback/%s",
+                        "extension": "jpg",
+                        "tileResolution": 512,
+                        "maxLevel": 4,
+                        "cubeResolution": 3096
+                    },
+                    "pitch": 0,
+                    "yaw": 130,
+                    "hotSpots": [{
+                        "pitch": -4,
+                        "yaw": 157,
+                        "type": "scene",
+                        "text": "Planta baja, Escaleras izquierda",
+                        "sceneId": "planta-baja-escaleras-izquierda",
+                        "targetYaw": 320,
+                        "targetPitch": 0
+                    }, {
+                        "pitch": -7,
+                        "yaw": 87,
+                        "type": "scene",
+                        "text": "Exterior, Esquina izquierda",
+                        "sceneId": "exterior-esquina-izquierda",
+                        "targetYaw": 330,
+                        "targetPitch": 10
+                    }]
+                },
+                "exterior-esquina-izquierda": {
+                    "title": "Exterior, Esquina izquierda",
+                    "type": "multires",
+                    "multiRes": {
+                        "path": "img/IMG_1225/%l/%s%y_%x",
+                        "fallbackPath": "img/IMG_1225/fallback/%s",
+                        "extension": "jpg",
+                        "tileResolution": 512,
+                        "maxLevel": 4,
+                        "cubeResolution": 3096
+                    },
+                    "pitch": 10,
+                    "yaw": 330,
+                    "hotSpots": [{
+                        "pitch": -10,
+                        "yaw": 358,
+                        "type": "scene",
+                        "text": "Exterior, Puerta centro izquierda",
+                        "sceneId": "exterior-puerta-centro-izquierda",
+                        "targetYaw": 130,
+                        "targetPitch": 0
+                    }, {
+                        "pitch": -7,
+                        "yaw": 308,
+                        "type": "scene",
+                        "text": "Planta baja, Pasillo izquierda",
+                        "sceneId": "planta-baja-pasillo-izquierda",
+                        "targetYaw": 135,
+                        "targetPitch": 0
+                    }]
+                },
+                "planta-baja-pasillo-izquierda": {
+                    "title": "Planta baja, Pasillo izquierda",
+                    "type": "multires",
+                    "multiRes": {
+                        "path": "img/IMG_1226/%l/%s%y_%x",
+                        "fallbackPath": "img/IMG_1226/fallback/%s",
+                        "extension": "jpg",
+                        "tileResolution": 512,
+                        "maxLevel": 4,
+                        "cubeResolution": 3096
+                    },
+                    "pitch": 0,
+                    "yaw": 135,
+                    "hotSpots": [{
+                        "pitch": -10,
+                        "yaw": 180,
+                        "type": "scene",
+                        "text": "Planta baja, Escaleras izquierda",
+                        "sceneId": "planta-baja-escaleras-izquierda",
+                        "targetYaw": 320,
+                        "targetPitch": 0
+                    }, {
+                        "pitch": -21,
+                        "yaw": 0,
+                        "type": "scene",
+                        "text": "Exterior, Esquina izquierda",
+                        "sceneId": "exterior-esquina-izquierda",
+                        "targetYaw": 330,
+                        "targetPitch": 10
+                    }]
+                },
+                "planta-primera-escaleras-izquierda": {
+                    "title": "Planta primera, Escaleras izquierda",
+                    "type": "multires",
+                    "multiRes": {
+                        "path": "img/IMG_1227/%l/%s%y_%x",
+                        "fallbackPath": "img/IMG_1227/fallback/%s",
+                        "extension": "jpg",
+                        "tileResolution": 512,
+                        "maxLevel": 4,
+                        "cubeResolution": 3096
+                    },
+                    "pitch": 0,
+                    "yaw": 290,
+                    "hotSpots": [{
+                        "pitch": -8,
+                        "yaw": 179,
+                        "type": "scene",
+                        "text": "Planta primera, pasillo central",
+                        "sceneId": "planta-primera-pasillo-central",
+                        "targetYaw": 188,
+                        "targetPitch": 0
+                    }, {
+                        "pitch": -20,
+                        "yaw": 50,
+                        "type": "scene",
+                        "text": "Planta baja, Escaleras izquierda",
+                        "sceneId": "planta-baja-escaleras-izquierda",
+                        "targetYaw": 320,
+                        "targetPitch": 0
+                    }]
+                },
+                "planta-primera-pasillo-central": {
+                    "title": "Planta primera, pasillo central",
+                    "type": "multires",
+                    "multiRes": {
+                        "path": "img/IMG_1228/%l/%s%y_%x",
+                        "fallbackPath": "img/IMG_1228/fallback/%s",
+                        "extension": "jpg",
+                        "tileResolution": 512,
+                        "maxLevel": 4,
+                        "cubeResolution": 3096
+                    },
+                    "pitch": 0,
+                    "yaw": 188,
+                    "hotSpots": [{
+                        "pitch": -8,
+                        "yaw": 229,
+                        "type": "scene",
+                        "text": "Planta primera, Escaleras izquierda",
+                        "sceneId": "planta-primera-escaleras-izquierda",
+                        "targetYaw": 290,
+                        "targetPitch": 0
+                    }]
+                }
+            }
+        });
+    </script>
+</body>
+
+</html>
