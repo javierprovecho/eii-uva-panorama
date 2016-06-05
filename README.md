@@ -13,6 +13,11 @@ School, University of Valladolid, Valladolid, Spain**
 
 ---
 
+## Original photospheres
+
+[Google Photos](https://goo.gl/photos/zEJ7sEb7q2zgc3aY6) (made with
+Google Street View app).
+
 ## Dependencies
 
 - [Panellum](https://github.com/mpetroff/pannellum)
