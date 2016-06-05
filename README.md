@@ -18,6 +18,13 @@ School, University of Valladolid, Valladolid, Spain**
 [Google Photos](https://goo.gl/photos/zEJ7sEb7q2zgc3aY6) (made with
 Google Street View app).
 
+
+## GitHub Repository and Pages (web preview)
+
+[repo: javierprovecho/eii-uva-panorama](https://github.com/javierprovecho/eii-uva-panorama)
+[pages: javierprovecho.github.io/eii-uva-panorama](https://javierprovecho.github.io/eii-uva-panorama)
+
+
 ## Dependencies
 
 - [Panellum](https://github.com/mpetroff/pannellum)
@@ -28,12 +35,14 @@ Google Street View app).
 - [hugin](https://launchpad.net/hugin)
 - [pillow](https://pypi.python.org/pypi/Pillow/2.1.0)
 
+
 ## Requirements
 
 Full equirectangular photospheres. Dimensions:
 
 - Width: **9728 px**
 - Height: **4864 px**
+
 
 ## Copyright
 
